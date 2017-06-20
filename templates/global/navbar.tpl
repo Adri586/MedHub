@@ -16,7 +16,7 @@
                 <li class="active"><a href="index.php">Home</a></li>
                 <li><a href="?requestedSite=about">About</a></li>
                 <li>
-                    <a href="?requestedSite=about">{if $config.language == Languages::ENGLISH}About us{elseif $config.language == "de"}Über uns{/if}</a>
+                    <a href="?requestedSite=about">{if $config.language == "en"}About us{elseif $config.language == "de"}Über uns{/if}</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100"

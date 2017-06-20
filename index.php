@@ -1,11 +1,8 @@
 <?php
 
-/**
- * Created by IntelliJ IDEA.
- * User: fionera
- * Date: 20.06.17
- * Time: 11:26
- */
+use MedHub\Config;
+use MedHub\Config\Languages;
+use MedHub\Config\RequestedSite;
 
 include("vendor/smarty/Smarty.class.php");
 
@@ -45,6 +42,9 @@ class MedHub
     private function getRealSitePath($folder, $siteName, $lang)
     {
 
+        $siteName = str_replace("/", "", $siteName);
+        $siteName = str_replace(".", "", $siteName);
+
         $sitePath = "./templates/" . $folder . "/" . $lang . "/" . $siteName . ".tpl";
 
         return $sitePath;
@@ -62,187 +62,26 @@ class MedHub
     }
 }
 
-abstract class ConfigParameter
+//Now following: Magic!
+function autoload($classId)
 {
+    $classIdParts       = explode("\\", $classId);
+    $classIdLength      = count($classIdParts);
+    $className          = $classIdParts[$classIdLength - 1];
+    $namespace          = $classIdParts[0];
 
-    private $value;
-
-    /**
-     * ConfigParameter constructor.
-     */
-    public function __construct()
-    {
-        if (isset($_REQUEST[$this->getConfigName()]) && $this->value == "") {
-            foreach ($this->getConfigValues() as $availableValue) {
-                if ($_REQUEST[$this->getConfigName()] === $availableValue) {
-                    $this->value = $availableValue;
-                }
-            }
-        }
-
-        if (isset($_SESSION[$this->getConfigName()]) && $this->value == "") {
-            foreach ($this->getConfigValues() as $availableValue) {
-                if ($_SESSION[$this->getConfigName()] === $availableValue) {
-                    $this->value = $availableValue;
-                }
-            }
-        }
-
-        if ($this->value == "") {
-            $this->value = $this->getDefaultValue();
-        }
-
-        return $this->value;
+    for ($i = 1; $i < $classIdLength - 1; $i++) {
+        $namespace .= '/' . $classIdParts[$i];
     }
 
-    public static abstract function getConfigName();
-
-    public abstract function getDefaultValue();
-
-    public abstract function getConfigValues();
-
-    public function setValue($newValue)
-    {
-        $this->value = $newValue;
-    }
-
-    public function getValue()
-    {
-        return $this->value;
-    }
-
-    public function save()
-    {
-        $_SESSION[$this->getConfigName()] = $this->value;
+    if (file_exists(dirname(__FILE__))
+        . '/' . $namespace
+        . '/' . $className
+        . '.class.php') {
+        include $namespace . '/' . $className . '.php';
     }
 }
 
-class Languages extends ConfigParameter
-{
-    const GERMAN = "de";
-    const ENGLISH = "en";
-
-
-    public static function getConfigName()
-    {
-        return "language";
-    }
-
-    public function getDefaultValue()
-    {
-        return Languages::ENGLISH;
-    }
-
-    public function getConfigValues()
-    {
-        return [Languages::GERMAN, Languages::ENGLISH];
-    }
-}
-
-class Themes extends ConfigParameter
-{
-    const DARK = "dark";
-    const BRIGHT = "bright";
-
-
-    public static function getConfigName()
-    {
-        return "theme";
-    }
-
-    public function getDefaultValue()
-    {
-        return Themes::BRIGHT;
-    }
-
-    public function getConfigValues()
-    {
-        return [Themes::DARK, Themes::BRIGHT];
-    }
-}
-
-class RequestedSite extends ConfigParameter
-{
-    public $value = "";
-
-    public function __construct()
-    {
-        parent::__construct();
-
-        if (isset($_REQUEST[$this->getConfigName()])) {
-            $this->value = $_REQUEST[$this->getConfigName()];
-        } else {
-            $this->value = $this->getDefaultValue();
-        }
-
-    }
-
-    public function setValue($newValue)
-    {
-        //Nothing
-    }
-
-    public function getValue()
-    {
-        return $this->value;
-    }
-
-    public function save()
-    {
-        //Nothing
-    }
-
-    public static function getConfigName()
-    {
-        return "requestedSite";
-    }
-
-    public function getDefaultValue()
-    {
-        return "index";
-    }
-
-    public function getConfigValues()
-    {
-        return [];
-    }
-
-
-}
-
-class Config
-{
-
-    public $rawConfig = [];
-
-    /**
-     * @var $configValues ConfigParameter[]
-     */
-    private $configValues = [Languages::class, Themes::class, RequestedSite::class];
-
-    /**
-     * Config constructor.
-     */
-    public function __construct()
-    {
-        foreach ($this->configValues as $configValue) {
-            /**@var $configValueInstance ConfigParameter */
-            $configValueInstance = new $configValue();
-
-            $this->rawConfig[$configValueInstance->getConfigName()] = $configValueInstance->getValue();
-
-            $configValueInstance->save();
-        }
-    }
-
-    /**
-     * @param $configParameter String
-     * @return String
-     */
-    public function getConfigParameter($configParameter)
-    {
-        return $this->rawConfig[$configParameter];
-    }
-}
+spl_autoload_register('autoload');
 
 new MedHub();
