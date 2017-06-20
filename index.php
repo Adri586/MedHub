@@ -34,6 +34,8 @@ class MedHub
 
         try {
             $this->smarty->display($this->getSitePath($this->config->getConfigParameter(RequestedSite::getConfigName()), $this->config->getConfigParameter(Languages::getConfigName())));
+
+            var_dump($_REQUEST);
         } catch (SmartyException $e) {
             $this->handleError($e);
         }
