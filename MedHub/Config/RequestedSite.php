@@ -10,12 +10,13 @@ class RequestedSite extends ConfigParameter
     {
         parent::__construct();
 
-        if (isset($_REQUEST[$this->getConfigName()])) {
-            $this->value = $_REQUEST[$this->getConfigName()];
+        if (isset($_SERVER["REQUEST_URI"])) {
+            $url = $_SERVER["REQUEST_URI"];
         } else {
-            $this->value = $this->getDefaultValue();
+            $url = $this->getDefaultValue();
         }
 
+        $this->value = str_replace("/", "_", $url);
     }
 
     public function setValue($newValue)
