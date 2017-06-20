@@ -35,10 +35,11 @@ class MedHub
         try {
             $this->smarty->display($this->getSitePath($this->config->getConfigParameter(RequestedSite::getConfigName()), $this->config->getConfigParameter(Languages::getConfigName())));
 
-            var_dump($_SERVER);
         } catch (SmartyException $e) {
             $this->handleError($e);
         }
+        
+        var_dump($_SERVER);
     }
 
     private function getRealSitePath($folder, $siteName, $lang)
@@ -67,10 +68,10 @@ class MedHub
 //Now following: Magic!
 function autoload($classId)
 {
-    $classIdParts       = explode("\\", $classId);
-    $classIdLength      = count($classIdParts);
-    $className          = $classIdParts[$classIdLength - 1];
-    $namespace          = $classIdParts[0];
+    $classIdParts = explode("\\", $classId);
+    $classIdLength = count($classIdParts);
+    $className = $classIdParts[$classIdLength - 1];
+    $namespace = $classIdParts[0];
 
     for ($i = 1; $i < $classIdLength - 1; $i++) {
         $namespace .= '/' . $classIdParts[$i];
@@ -79,7 +80,8 @@ function autoload($classId)
     if (file_exists(dirname(__FILE__))
         . '/' . $namespace
         . '/' . $className
-        . '.class.php') {
+        . '.class.php'
+    ) {
         include $namespace . '/' . $className . '.php';
     }
 }
