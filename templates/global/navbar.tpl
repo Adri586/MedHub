@@ -9,28 +9,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php"><img src="/web/img/logo.png" alt="Medhub"></a>
+            <a class="navbar-brand" href="/"><img src="/web/img/logo.png" alt="Medhub"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php">Home</a></li>
-                <li><a href="?requestedSite=about">About</a></li>
+                <li {if $config.requestedSite == "index"} class="active" {/if}><a href="/">Home</a></li>
                 <li>
-                    <a href="?requestedSite=about">{if $config.language == "en"}About us{elseif $config.language == "de"}Über uns{/if}</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100"
-                       data-close-others="true" role="button" aria-haspopup="true"
-                       aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
+                    <a href="/about" {if $config.requestedSite == "about"} class="active" {/if}>{if $config.language == "en"}About us{elseif $config.language == "de"}Über uns{/if}</a>
                 </li>
             </ul>
 
