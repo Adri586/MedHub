@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="Medhub"></a>
+            <a class="navbar-brand" href="index.php"><img src="/web/img/logo.png" alt="Medhub"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
