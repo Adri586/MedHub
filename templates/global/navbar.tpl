@@ -33,17 +33,48 @@
                     </ul>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
 
-                <li {if $config.language == "de"}class="active"{/if}>
-                    <a onclick="setParam('language', 'de');">
-                        {if $config.language == "en"}German{elseif $config.language == "de"}Deutsch{/if}
-                    </a>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100"
+                       data-close-others="true" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        {if $config.language == "en"}Language{elseif $config.language == "de"}Sprache{/if}
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li {if $config.language == "de"}class="active"{/if}>
+                            <a onclick="setParam('language', 'de');">
+                                {if $config.language == "en"}German{elseif $config.language == "de"}Deutsch{/if}
+                            </a>
+                        </li>
+                        <li {if $config.language == "en"}class="active"{/if}>
+                            <a onclick="setParam('language', 'en');">
+                                {if $config.language == "en"}English{elseif $config.language == "de"}Englisch{/if}
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li {if $config.language == "en"}class="active"{/if}>
-                    <a onclick="setParam('language', 'en');">
-                        {if $config.language == "en"}English{elseif $config.language == "de"}Englisch{/if}
-                    </a>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100"
+                       data-close-others="true" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        {if $config.language == "en"}Theme{elseif $config.language == "de"}Design{/if}
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li {if $config.theme == "dark"}class="active"{/if}>
+                            <a onclick="setParam('theme', 'dark');">
+                                {if $config.language == "en"}Dark{elseif $config.language == "de"}Dunkel{/if}
+                            </a>
+                        </li>
+                        <li {if $config.theme == "bright"}class="active"{/if}>
+                            <a onclick="setParam('theme', 'bright');">
+                                {if $config.language == "en"}Bright{elseif $config.language == "de"}Hell{/if}
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div><!--/.nav-collapse -->
