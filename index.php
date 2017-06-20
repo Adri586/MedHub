@@ -38,7 +38,7 @@ class MedHub
         } catch (SmartyException $e) {
             $this->handleError($e);
         }
-        
+
         var_dump($_SERVER);
     }
 
