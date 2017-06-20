@@ -18,7 +18,7 @@ class RequestedSite extends ConfigParameter
         }
 
         $this->value = str_replace(".php", "", $url);
-        $this->value = explode("/", $url)[0];
+        $this->value = explode("/", $url)[1];
     }
 
     public function setValue($newValue)
