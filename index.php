@@ -45,7 +45,6 @@ class MedHub
     private function getRealSitePath($folder, $siteName, $lang)
     {
 
-        $siteName = str_replace("/", "", $siteName);
         $siteName = str_replace(".", "", $siteName);
 
         $sitePath = "./templates/" . $folder . "/" . $lang . "/" . $siteName . ".tpl";
@@ -61,10 +60,12 @@ class MedHub
             $site = $siteArray[count($siteArray) - 1];
             $path = implode("/", array_splice($siteArray, count($siteArray) - 1,  1));
 
-            var_dump($this->getRealSitePath($path, $site, $lang));
+            die($this->getRealSitePath($path, $site, $lang));
 
             return $this->getRealSitePath($path, $site, $lang);
         }
+
+        var_dump($this->getRealSitePath($siteName, $siteName, $lang));
 
         return $this->getRealSitePath($siteName, $siteName, $lang);
     }
