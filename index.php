@@ -60,7 +60,7 @@ class MedHub
             $site = $siteArray[count($siteArray) - 1];
             $path = implode("/", array_splice($siteArray, -1,  1));
 
-            print_r(array_splice($siteArray, 0,  count($siteArray) -1));
+            print_r(array_splice($siteArray, 0,  count($siteArray)));
             var_dump($site);
             var_dump($path);
 
