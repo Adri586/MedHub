@@ -14,7 +14,7 @@ class RequestedSite extends ConfigParameter
         if (isset($_SERVER["REQUEST_URI"])) {
             $url = $_SERVER["REQUEST_URI"];
 
-
+            //Security!
             $url = str_replace(".php", "", $url);
             $url = substr($url, 1);
             $url = str_replace(".", "", $url);
