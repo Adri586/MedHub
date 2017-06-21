@@ -18,13 +18,12 @@ class RequestedSite extends ConfigParameter
             $url = str_replace(".php", "", $url);
             $url = substr($url, 1);
             $url = str_replace(".", "", $url);
+            $url = str_replace("//", "/", $url);
         }
 
         if (!isset($url) || $url == "") {
             $url = $this->getDefaultValue();
         }
-
-        var_dump($url);
 
         $this->value = $url;
     }

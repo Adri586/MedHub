@@ -39,7 +39,6 @@ class MedHub
             $this->handleError($e);
         }
 
-        var_dump($_SERVER);
     }
 
     private function getRealSitePath($folder, $siteName, $lang)
@@ -60,12 +59,8 @@ class MedHub
             $site = $siteArray[count($siteArray) - 1];
             $path = implode("/", array_splice($siteArray, 0,  count($siteArray)));
 
-            var_dump($this->getRealSitePath($path, $site, $lang));
-
             return $this->getRealSitePath($path, $site, $lang);
         }
-
-        var_dump($this->getRealSitePath($siteName, $siteName, $lang));
 
         return $this->getRealSitePath($siteName, $siteName, $lang);
     }
