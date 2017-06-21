@@ -19,6 +19,7 @@ class RequestedSite extends ConfigParameter
             $url = substr($url, 1);
             $url = str_replace(".", "", $url);
             $url = str_replace("//", "/", $url);
+            $url = explode("?", $url)[0];
         }
 
         if (!isset($url) || $url == "") {
