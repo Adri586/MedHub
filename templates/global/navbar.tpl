@@ -65,6 +65,28 @@
                     </ul>
                 </li>
             </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100"
+                       data-close-others="true" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        {if $config.language == "en"}Customer Type{elseif $config.language == "de"}Käuferart{/if}
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li {if $config.customerType == "normal"}class="active"{/if}>
+                            <a onclick="setParam('customerType', 'normal');">
+                                {if $config.language == "en"}Normal{elseif $config.language == "de"}Normal{/if}
+                            </a>
+                        </li>
+                        <li {if $config.customerType == "doctor"}class="active"{/if}>
+                            <a onclick="setParam('customerType', 'doctor');">
+                                {if $config.language == "en"}Doctor{elseif $config.language == "de"}Doktor{/if}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
