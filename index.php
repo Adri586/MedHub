@@ -61,7 +61,7 @@ class MedHub
             $site = $siteArray[count($siteArray) - 1];
             $path = implode("/", array_splice($siteArray, count($siteArray) - 1,  1));
 
-            return $this->getRealSitePath($path, $siteArray, $lang);
+            return $this->getRealSitePath($path, $site, $lang);
         }
 
         return $this->getRealSitePath($siteName, $siteName, $lang);
