@@ -55,6 +55,15 @@ class MedHub
 
     private function getSitePath($siteName, $lang)
     {
+        if (count(explode("/", $siteName)) > 1) {
+
+            $siteArray = explode("/", $siteName);
+            $site = $siteArray[count($siteArray) - 1];
+            $path = implode("/", array_splice($siteArray, count($siteArray) - 1,  1));
+
+            return $this->getRealSitePath($path, $siteArray, $lang);
+        }
+
         return $this->getRealSitePath($siteName, $siteName, $lang);
     }
 
