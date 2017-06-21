@@ -38,6 +38,8 @@ class MedHub
         } catch (SmartyException $e) {
             $this->handleError($e);
         }
+
+        var_dump($this->config->rawConfig);
     }
 
     private function handleError(SmartyException $e)
