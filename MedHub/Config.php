@@ -3,6 +3,7 @@
 namespace MedHub;
 
 use MedHub\Config\ConfigParameter;
+use MedHub\Config\CustomerType;
 use MedHub\Config\Languages;
 use MedHub\Config\RequestedSite;
 use MedHub\Config\Themes;
@@ -15,7 +16,7 @@ class Config
     /**
      * @var $configValues ConfigParameter[]
      */
-    private $configValues = [Languages::class, Themes::class, RequestedSite::class];
+    private $configValues = [Languages::class, Themes::class, RequestedSite::class, CustomerType::class];
 
     /**
      * Config constructor.
