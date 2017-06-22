@@ -1,5 +1,37 @@
 {include file="../../global/header.tpl"}
 {include file="../../global/navbar.tpl"}
+<style>
+    .site-wrapper {
+        display: table;
+        width: 100%;
+        height: 100%; /* For at least Firefox */
+        min-height: 100%;
+        -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+        box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    }
+    .site-wrapper-inner {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .cover-container {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* Padding for spacing */
+    .inner {
+        padding: 30px;
+    }
+
+    /*
+     * Cover
+     */
+
+    .cover {
+        padding: 0 20px;
+    }
+</style>
+
 <div class="site-wrapper">
     <div class="site-wrapper-inner">
         <div class="cover-container">
