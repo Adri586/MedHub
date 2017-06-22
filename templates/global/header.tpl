@@ -19,4 +19,5 @@
         <link rel="stylesheet" href="/web/css/dark_theme.css">
     {/if}
 </head>
-<body id="body">
+<body>
+<div id="particles-js"></div>
