@@ -29,7 +29,7 @@ class Router
     protected function getSitePath()
     {
         /** @var Config $config */
-        $config = MedHub()->Config()->rawConfig;
+        $config = MedHub()->Config();
 
         $requestUrl = $config->getConfigParameter(RequestedSite::getConfigName());
         $language = $config->getConfigParameter(Languages::getConfigName());
