@@ -1,6 +1,6 @@
 <?php
 
-require_once 'vendor/smarty/Autoloader.php';
+include 'vendor/smarty/Autoloader.php';
 use MedHub\MedHub;
 
 /**
@@ -47,8 +47,8 @@ function autoload($classId)
     }
 }
 
-spl_autoload_register('autoload');
 Smarty_Autoloader::register();
+spl_autoload_register('autoload');
 
 MedHub(new MedHub());
 
