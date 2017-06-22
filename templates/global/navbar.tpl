@@ -74,9 +74,9 @@
                         {if $config.language == "en"}Customer Type{elseif $config.language == "de"}Käuferart{/if}
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li {if $config.customerType == "normal"}class="active"{/if}>
+                        <li {if $config.customerType == "patient"}class="active"{/if}>
                             <a onclick="setParam('customerType', 'patient');">
-                                {if $config.language == "en"}Normal{elseif $config.language == "de"}Normal{/if}
+                                {if $config.language == "en"}Patient{elseif $config.language == "de"}Patient{/if}
                             </a>
                         </li>
                         <li {if $config.customerType == "doctor"}class="active"{/if}>
