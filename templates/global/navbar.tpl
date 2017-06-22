@@ -75,7 +75,7 @@
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li {if $config.customerType == "normal"}class="active"{/if}>
-                            <a onclick="setParam('customerType', 'normal');">
+                            <a onclick="setParam('customerType', 'patient');">
                                 {if $config.language == "en"}Normal{elseif $config.language == "de"}Normal{/if}
                             </a>
                         </li>
