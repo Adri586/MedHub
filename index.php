@@ -1,6 +1,7 @@
 <?php
 
 use MedHub\MedHub;
+use function MedHub\MedHub;
 
 //Now following: Magic!
 function autoload($classId)
@@ -28,6 +29,6 @@ Smarty_Autoloader::register();
 
 spl_autoload_register('autoload');
 
-$medHub = new MedHub();
+MedHub(new MedHub());
 
-$medHub->Router()->render();
+MedHub()->Router()->render();

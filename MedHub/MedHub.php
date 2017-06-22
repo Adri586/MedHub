@@ -56,6 +56,7 @@ class MedHub
 function MedHub($newInstance = null)
 {
     static $instance;
+
     if (isset($newInstance)) {
         $oldInstance = $instance;
         $instance = $newInstance;
