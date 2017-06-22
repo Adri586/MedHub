@@ -28,4 +28,6 @@ Smarty_Autoloader::register();
 
 spl_autoload_register('autoload');
 
-new MedHub();
+$medHub = new MedHub();
+
+$medHub->Router()->render();
