@@ -26,9 +26,6 @@ class MedHub
         $this->config = new Config();
         $this->view = new View();
         $this->router = new Router();
-
-        var_dump($this->config->rawConfig);
-
     }
 
     public function View() {
