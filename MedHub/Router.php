@@ -1,18 +1,34 @@
 <?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: fionera
+ * Date: 22.06.17
+ * Time: 22:25
+ */
 
 namespace MedHub;
+
 
 use MedHub\Config\Languages;
 use MedHub\Config\RequestedSite;
 
-class UrlParse
+class Router
 {
+
+    public function render() {
+        MedHub()->View()->assign("config", MedHub()->Config()->rawConfig);
+
+        MedHub()->View()->render($this->getSitePath());
+    }
+
     /**
-     * @param $config Config
-     * @return mixed
+     * @return string
      */
-    public static function getSitePath($config)
+    protected function getSitePath()
     {
+        /** @var Config $config */
+        $config = MedHub()->Config()->rawConfig;
+
         $requestUrl = $config->getConfigParameter(RequestedSite::getConfigName());
         $language = $config->getConfigParameter(Languages::getConfigName());
 
@@ -24,10 +40,10 @@ class UrlParse
             $site = $siteArray[count($siteArray) - 1];
             $path = implode("/", array_splice($siteArray, 0, count($siteArray)));
 
-            $sitePath = UrlParse::getRawPath($path, $language, $site);
+            $sitePath = $this->getRawPath($path, $language, $site);
 
         } else {
-            $sitePath = UrlParse::getRawPath($requestUrl, $language, $requestUrl);
+            $sitePath = $this->getRawPath($requestUrl, $language, $requestUrl);
         }
 
         return $sitePath;

@@ -1,52 +1,6 @@
 <?php
 
-use MedHub\Config;
-use MedHub\Config\Languages;
-use MedHub\UrlParse;
-
-include("vendor/smarty/Smarty.class.php");
-
-class MedHub
-{
-    public $smarty;
-    public $config;
-
-    /**
-     * MedHub constructor.
-     */
-    public function __construct()
-    {
-        session_start();
-
-        $this->smarty = new Smarty();
-        $this->config = new Config();
-
-        //$smarty->force_compile = true;
-        $this->smarty->debugging = false;
-        $this->smarty->caching = false;
-        $this->smarty->cache_lifetime = 120;
-
-//        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//            $this->postHandler();
-//        }
-
-        $this->smarty->assign("config", $this->config->rawConfig);
-
-        try {
-            $this->smarty->display(UrlParse::getSitePath($this->config));
-
-        } catch (SmartyException $e) {
-            $this->handleError($e);
-        }
-
-        var_dump($this->config->rawConfig);
-    }
-
-    private function handleError(SmartyException $e)
-    {
-        $this->smarty->display(UrlParse::getRawPath("errors", $this->config->getConfigParameter(Languages::getConfigName()), "404"));
-    }
-}
+use MedHub\MedHub;
 
 //Now following: Magic!
 function autoload($classId)
@@ -68,6 +22,9 @@ function autoload($classId)
         include $namespace . '/' . $className . '.php';
     }
 }
+
+require_once 'vendor/smarty/Autoloader.php';
+Smarty_Autoloader::register();
 
 spl_autoload_register('autoload');
 
