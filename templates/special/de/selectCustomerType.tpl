@@ -1,7 +1,7 @@
 {include file="../../global/header.tpl"}
 {include file="../../global/navbar.tpl"}
-<div class="jumbotron" style="max-width: 60%;">
-    <div class="container">
+<div class="jumbotron">
+    <div class="container" style="max-width: 60%;">
         <h1>Willkommen auf MedHub!</h1>
         <p>Um ihnen eine bestmögliche Erklärung unserer Dienste zu geben, sagen sie uns bitte zunächst ob sie ein
             Patient oder ein Arzt sind. Sie können diese Entscheidung jederzeit über das obige Menü ändern</p>
