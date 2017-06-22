@@ -9,13 +9,15 @@
 namespace MedHub;
 
 
+use MedHub\Config\CustomerType;
 use MedHub\Config\Languages;
 use MedHub\Config\RequestedSite;
 
 class Router
 {
 
-    public function render() {
+    public function render()
+    {
         MedHub()->View()->assign("config", MedHub()->Config()->rawConfig);
 
         MedHub()->View()->render($this->getSitePath());
@@ -31,6 +33,10 @@ class Router
 
         $requestUrl = $config->getConfigParameter(RequestedSite::getConfigName());
         $language = $config->getConfigParameter(Languages::getConfigName());
+
+        if ($config->getConfigParameter(CustomerType::getConfigName()) == CustomerType::NULL) {
+            return $this->getRawPath("special", $language, "selectCustomerType");
+        }
 
         $requestUrl = str_replace(".", "", $requestUrl);
 

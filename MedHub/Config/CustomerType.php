@@ -8,16 +8,6 @@ class CustomerType extends ConfigParameter
     const PATIENT = "patient";
     const NULL = "null";
 
-    public function __construct()
-    {
-        parent::__construct();
-
-        if ($this->getValue() == CustomerType::NULL) {
-            
-        }
-    }
-
-
     public static function getConfigName()
     {
         return "customerType";

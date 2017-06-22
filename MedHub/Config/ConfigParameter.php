@@ -12,6 +12,17 @@ abstract class ConfigParameter
      */
     public function __construct()
     {
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (isset($_POST[$this->getConfigName()]) && $this->value == "") {
+                foreach ($this->getConfigValues() as $availableValue) {
+                    if ($_POST[$this->getConfigName()] === $availableValue) {
+                        $this->value = $availableValue;
+                    }
+                }
+            }
+        }
+
         if (isset($_REQUEST[$this->getConfigName()]) && $this->value == "") {
             foreach ($this->getConfigValues() as $availableValue) {
                 if ($_REQUEST[$this->getConfigName()] === $availableValue) {

@@ -10,7 +10,6 @@ class RequestedSite extends ConfigParameter
     {
         parent::__construct();
 
-
         if (isset($_SERVER["REQUEST_URI"])) {
             $url = $_SERVER["REQUEST_URI"];
 
