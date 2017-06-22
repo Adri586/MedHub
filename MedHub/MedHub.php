@@ -14,6 +14,8 @@ class MedHub
 
     protected $config;
 
+    protected $router;
+
     /**
      * MedHub constructor.
      */
@@ -23,8 +25,7 @@ class MedHub
 
         $this->config = new Config();
         $this->view = new View();
-
-        $this->view->assign("config", $this->config->rawConfig);
+        $this->view = new Router();
 
     }
 
@@ -34,6 +35,11 @@ class MedHub
 
     public function Config() {
         return $this->config;
+    }
+
+
+    public function Router() {
+        return $this->router;
     }
 
 }
