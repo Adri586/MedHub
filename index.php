@@ -1,7 +1,30 @@
 <?php
 
+require_once 'vendor/smarty/Autoloader.php';
 use MedHub\MedHub;
-use function MedHub\MedHub;
+
+/**
+ * Returns application instance
+ *
+ * @param MedHub $newInstance
+ *
+ * @return MedHub
+ */
+function MedHub($newInstance = null)
+{
+    static $instance;
+
+    if (isset($newInstance)) {
+        $oldInstance = $instance;
+        $instance = $newInstance;
+
+        return $oldInstance;
+    } elseif (!isset($instance)) {
+        die("An error occurred");
+    }
+
+    return $instance;
+}
 
 //Now following: Magic!
 function autoload($classId)
@@ -24,10 +47,8 @@ function autoload($classId)
     }
 }
 
-require_once 'vendor/smarty/Autoloader.php';
-Smarty_Autoloader::register();
-
 spl_autoload_register('autoload');
+Smarty_Autoloader::register();
 
 MedHub(new MedHub());
 

@@ -45,26 +45,3 @@ class MedHub
     }
 
 }
-
-/**
- * Returns application instance
- *
- * @param MedHub $newInstance
- *
- * @return MedHub
- */
-function MedHub($newInstance = null)
-{
-    static $instance;
-
-    if (isset($newInstance)) {
-        $oldInstance = $instance;
-        $instance = $newInstance;
-
-        return $oldInstance;
-    } elseif (!isset($instance)) {
-        die("An error occurred");
-    }
-
-    return $instance;
-}
