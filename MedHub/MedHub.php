@@ -25,7 +25,7 @@ class MedHub
 
         $this->config = new Config();
         $this->view = new View();
-        $this->view = new Router();
+        $this->router = new Router();
 
     }
 
