@@ -16,22 +16,56 @@
 
                     <div class="container">
                         <div class="col-xs-2"></div>
-                        <div class="col-xs-8">
-                            <div class="col-xs-6">
-                                <div class="text-center">
-                                    <a class="btn btn-lg btn-success" onclick="setParam('customerType', 'patient');"
-                                       role="button">Patient</a>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-6">
-                                <div class="text-center">
-                                    <a class="btn btn-lg btn-success" onclick="setParam('customerType', 'doctor');"
-                                       role="button">Doctor</a>
-                                </div>
+                        <div class="col-xs-3">
+                            <div class="text-center">
+                                <a class="btn btn-lg btn-success" onclick="setParam('customerType', 'patient');"
+                                   role="button">Patient</a>
                             </div>
                         </div>
                         <div class="col-xs-2"></div>
+                        <div class="col-xs-3">
+                            <div class="text-center">
+                                <a class="btn btn-lg btn-success" onclick="setParam('customerType', 'doctor');"
+                                   role="button">Doctor</a>
+                            </div>
+                        </div>
+                        <div class="col-xs-2"></div>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
                     </div>
                 </div>
             </div>
