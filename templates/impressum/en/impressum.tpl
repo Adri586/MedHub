@@ -10,16 +10,19 @@
                             <h1>Impressum</h1>
                             <h2>Medhub Projekt</h2>
                             <ul>
-                                <li>Medhub is a Projekt from:</li>
-                                <ul>
-                                    <li>Nicolai Tosch</li>
-                                    <li>Adriane Schütze</li>
-                                    <li>Mauritzio Maggiorelli</li>
-                                    <li>Marvin Sperber</li>
-                                    <li>Tim Windelschmidt</li>
-                                </ul>
+                                <li><h2>Medhub is a Project from:</h2>
+                                    <ul>
+                                        <li>Nicolai Tosch</li>
+                                        <li>Adriane Schütze</li>
+                                        <li>Mauritzio Maggiorelli</li>
+                                        <li>Marvin Sperber</li>
+                                        <li>Tim Windelschmidt</li>
+                                    </ul>
+                                </li>
                             </ul>
-                            <p>For more Information please refer to <a href="https://www.fionera.de/?page_id=68">Fionera</a></p>
+                            <br>
+                            <p>For more Information please refer to <a
+                                        href="https://www.fionera.de/?page_id=68">Fionera</a></p>
                         </div>
                     </div>
                 </div>
