@@ -7,7 +7,7 @@
                 <div class="inner">
                     <div class="jumbotron">
                         <div class="container">
-                            <h1>Impressum</h1>
+                            <h1>Imprint</h1>
                             <h2>Medhub is a Project from:</h2>
                             <ul>
                                 <li>Nicolai Tosch</li>
