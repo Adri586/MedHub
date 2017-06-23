@@ -34,7 +34,7 @@ class Router
         $requestUrl = $config->getConfigParameter(RequestedSite::getConfigName());
         $language = $config->getConfigParameter(Languages::getConfigName());
 
-        if ($config->getConfigParameter(CustomerType::getConfigName()) == CustomerType::NULL) {
+        if ($config->getConfigParameter(CustomerType::getConfigName()) == CustomerType::NULL && $requestUrl != "impressum") {
             return $this->getRawPath("special", $language, "selectCustomerType");
         }
 
