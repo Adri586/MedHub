@@ -1,3 +1,6 @@
+/**
+Global
+ */
 body,
 html {
     height: 100%
@@ -8,9 +11,12 @@ body {
     background-color: #212432;
 }
 
+/**
+ Front Page
+ */
 #particles-js canvas {
     display: block;
-    background: rgb(33,36,50);
+    background: rgb(33, 36, 50);
     vertical-align: bottom;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -43,10 +49,12 @@ body {
     width: 100%;
     position: relative;
 }
+
 .site-wrapper-inner {
     display: table-cell;
     vertical-align: top;
 }
+
 .cover-container {
     margin-right: auto;
     margin-left: auto;
@@ -58,4 +66,22 @@ body {
 
 .cover {
     padding: 0 20px;
+}
+
+/**
+Footer
+ */
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
 }
