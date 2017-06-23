@@ -16,20 +16,56 @@
                     </div>
 
                     <div class="container">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8">
-                            <div class="col-md-6 text-center">
+                        <div class="col-xs-2"></div>
+                        <div class="col-xs-8">
+                            <div class="col-xs-6 text-center">
                                 <a class="btn btn-lg btn-success" onclick="setParam('customerType', 'patient');"
                                    role="button">Patient</a>
                             </div>
 
-                            <div class="col-md-6 text-center">
+                            <div class="col-xs-6 text-center">
                                 <a class="btn btn-lg btn-success" onclick="setParam('customerType', 'doctor');"
                                    role="button">Doktor</a>
                             </div>
                         </div>
-                        <div class="col-md-2"></div>
+                        <div class="col-xs-2"></div>
                     </div>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
                 </div>
             </div>
         </div>
