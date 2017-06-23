@@ -12,6 +12,14 @@ body {
 }
 
 /**
+Header
+ */
+
+.navbar-brand {
+    padding-top: 5px;
+}
+
+/**
  Particle Background
  */
 #particles-js canvas {
