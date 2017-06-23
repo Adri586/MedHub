@@ -45,7 +45,7 @@ class Router
             $siteArray = explode("/", $requestUrl);
             $site = $siteArray[count($siteArray) - 1];
             $path = implode("/", array_splice($siteArray, 0, count($siteArray)));
-
+    
             $sitePath = $this->getRawPath($path, $language, $site);
 
         } else {
