@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>
-        {$config.pageName} - {$config.pageSlogan.$config.language}
+        {$config.pageName} - {$config.pageSlogan[$config.language]}
     </title>
     <link rel="stylesheet" href="/web/css/vendor/bootstrap.css">
     <link rel="stylesheet" href="/web/css/vendor/bootstrap-theme.css">
