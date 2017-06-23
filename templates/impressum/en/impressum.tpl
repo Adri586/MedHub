@@ -3,13 +3,11 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Imprint</h1>
-        <h2>Medhub is a Project from:</h2>
+        <h2>{$config.pageName} is a Project from:</h2>
         <ul>
-            <li>Nicolai Tosch</li>
-            <li>Adriane Schütze</li>
-            <li>Mauritzio Maggiorelli</li>
-            <li>Marvin Sperber</li>
-            <li>Tim Windelschmidt</li>
+            {foreach $config.projectMembers as $member}
+                <li>{$member}</li>
+            {/foreach}
         </ul>
         <br>
         <p>For more Information please refer to <a

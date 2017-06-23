@@ -2,7 +2,7 @@
 {include file="../../global/navbar.tpl"}
 <div class="jumbotron">
     <div class="container">
-        <h1>Willkommen auf MedHub!</h1>
+        <h1>Willkommen auf {$config.pageName}!</h1>
         <p>Um ihnen eine bestmögliche Erklärung unserer Dienste zu geben, sagen sie uns bitte
             zunächst ob sie ein
             Patient oder ein Arzt sind. Sie können diese Entscheidung jederzeit über das obige Menü

@@ -2,7 +2,7 @@
 {include file="../../global/navbar.tpl"}
 <div class="jumbotron">
     <div class="container">
-        <h1>Welcome to MedHub!</h1>
+        <h1>Welcome to {$config.pageName}!</h1>
         <p>To grand you the best possible explanation about our services, please first say us if you
             are a Doctor or a
             Patient. You can change this selection afterwards over the Topmenu</p>

@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html {if $config.language == "en"}lang="en" {elseif $config.language == "de"} lang="de"{/if}>
+<html lang="{$config.language}">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>
-        {if $config.language == "en"}
-            MedHub - Easier Medicine management
-        {elseif $config.language == "de"}
-            MedHub - Einfacher Medikamente Organisieren
-        {/if}
+        {$config.pageName} - {$config.pageSlogan.$config.language}
     </title>
     <link rel="stylesheet" href="/web/css/vendor/bootstrap.css">
     <link rel="stylesheet" href="/web/css/vendor/bootstrap-theme.css">

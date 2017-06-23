@@ -3,13 +3,11 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Impressum</h1>
-        <h2>Medhub ist ein Projekt von:</h2>
+        <h2>{$config.pageName} ist ein Projekt von:</h2>
         <ul>
-            <li>Nicolai Tosch</li>
-            <li>Adriane Schütze</li>
-            <li>Mauritzio Maggiorelli</li>
-            <li>Marvin Sperber</li>
-            <li>Tim Windelschmidt</li>
+            {foreach $config.projectMembers as $member}
+                <li>{$member}</li>
+            {/foreach}
         </ul>
         <br>
         <p>Für weitere Informationen bitte bei <a

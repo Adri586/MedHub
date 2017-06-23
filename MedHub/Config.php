@@ -31,6 +31,22 @@ class Config
 
             $configValueInstance->save();
         }
+
+        $this->rawConfig += [
+            "pageName" => "MedHub",
+            "pageSlogan" => [
+                "de" => "Einfacher Medikamente organisieren",
+                "en" => "Easier Medicine management"
+            ],
+            "logoUrl" => "/web/img/logo.png",
+            "projectMembers" => [
+                "Nicolai Tosch",
+                "Adriane Schütze",
+                "Mauritzio Maggiorelli",
+                "Marvin Sperber",
+                "Tim Windelschmidt"
+            ]
+        ];
     }
 
     /**
