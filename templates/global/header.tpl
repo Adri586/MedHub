@@ -13,6 +13,7 @@
     </title>
     <link rel="stylesheet" href="/web/css/vendor/bootstrap.css">
     <link rel="stylesheet" href="/web/css/vendor/bootstrap-theme.css">
+    <link rel="stylesheet" href="/web/css/vendor/font-awesome.min.css">
     <link rel="stylesheet" href="/web/css/global.css">
 
     {if $config.theme == "dark"}
