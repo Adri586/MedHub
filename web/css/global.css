@@ -84,7 +84,7 @@ footer {
 footer > nav {
     position: relative;
     height: 45px;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
     border: 1px solid transparent;
-    border-radius: 0;
+    border-radius: 0 !important;
 }
