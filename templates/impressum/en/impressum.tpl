@@ -8,8 +8,8 @@
                     <div class="jumbotron">
                         <div class="container">
                             <h1>Impressum</h1>
+                            <h2>Medhub is a Project from:</h2>
                             <ul>
-                                <h2>Medhub is a Project from:</h2>
                                 <li>Nicolai Tosch</li>
                                 <li>Adriane Schütze</li>
                                 <li>Mauritzio Maggiorelli</li>
