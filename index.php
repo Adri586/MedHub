@@ -7,7 +7,6 @@ use MedHub\MedHub;
  * Returns application instance
  *
  * @param MedHub $newInstance
- *
  * @return MedHub
  */
 function MedHub($newInstance = null)
@@ -26,7 +25,11 @@ function MedHub($newInstance = null)
     return $instance;
 }
 
-//Now following: Magic!
+
+/**
+ * PHP Class Autoloading based on Namespace
+ * @param $classId
+ */
 function autoload($classId)
 {
     $classIdParts = explode("\\", $classId);

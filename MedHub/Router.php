@@ -13,9 +13,17 @@ use MedHub\Config\CustomerType;
 use MedHub\Config\Languages;
 use MedHub\Config\RequestedSite;
 
+/**
+ * Parses the Request and initiates the Rendering
+ * Class Router
+ * @package MedHub
+ */
 class Router
 {
 
+    /**
+     * Render the requested Site
+     */
     public function render()
     {
         MedHub()->View()->assign("config", MedHub()->Config()->rawConfig);
@@ -24,7 +32,7 @@ class Router
     }
 
     /**
-     * @return string
+     * @return string The Path of the Template for the Requested Site
      */
     protected function getSitePath()
     {
@@ -55,6 +63,12 @@ class Router
         return $sitePath;
     }
 
+    /**
+     * @param $path string Basefolder
+     * @param $language string Language
+     * @param $site String Template Name
+     * @return string Path of the Site
+     */
     public static function getRawPath($path, $language, $site)
     {
         return "./templates/" . $path . "/" . $language . "/" . $site . ".tpl";

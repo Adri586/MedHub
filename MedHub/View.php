@@ -15,7 +15,7 @@ use SmartyException;
 class View
 {
 
-    /** @var \Smarty $smarty */
+    /** @var \Smarty $smarty The Smarty Instance*/
     protected $smarty;
 
     /**
@@ -23,7 +23,7 @@ class View
      */
     public function __construct()
     {
-        $this->smarty = new Smarty();
+        $this->smarty = new Smarty(); // Create a new Smarty Instance
 
         //$smarty->force_compile = true;
         $this->smarty->debugging = false;
@@ -31,14 +31,24 @@ class View
         $this->smarty->cache_lifetime = 120;
     }
 
+    /**
+     * Assign a Value to the Template at a specific Path
+     * @param string $path Path for the Template Value.
+     * @param mixed $var The Value that gets assigned to the Path
+     */
     public function assign(string $path, $var) {
         $this->smarty->assign($path, $var);
     }
 
     protected function handleError($error) {
         $this->smarty->display(Router::getRawPath("errors", MedHub()->Config()->getConfigParameter(Languages::getConfigName()), "404"));
+        http_response_code(404);
     }
 
+    /**
+     * Renders the Template
+     * @param $sitePath String Path to the Template to render
+     */
     public function render($sitePath) {
         try {
             $this->smarty->display($sitePath);

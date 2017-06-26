@@ -5,6 +5,9 @@ namespace MedHub\Config;
 abstract class ConfigParameter
 {
 
+    /**
+     * @var $value mixed The Value
+     */
     private $value;
 
     /**
@@ -13,6 +16,9 @@ abstract class ConfigParameter
     public function __construct()
     {
 
+        /**
+         * If Post request, look in the parameter
+         */
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($_POST[$this->getConfigName()]) && $this->value == "") {
                 foreach ($this->getConfigValues() as $availableValue) {
@@ -23,6 +29,9 @@ abstract class ConfigParameter
             }
         }
 
+        /**
+         * If Request has Parameter use it
+         */
         if (isset($_REQUEST[$this->getConfigName()]) && $this->value == "") {
             foreach ($this->getConfigValues() as $availableValue) {
                 if ($_REQUEST[$this->getConfigName()] === $availableValue) {
@@ -31,6 +40,9 @@ abstract class ConfigParameter
             }
         }
 
+        /**
+         * If Session has Parameter use it
+         */
         if (isset($_SESSION[$this->getConfigName()]) && $this->value == "") {
             foreach ($this->getConfigValues() as $availableValue) {
                 if ($_SESSION[$this->getConfigName()] === $availableValue) {
@@ -39,6 +51,9 @@ abstract class ConfigParameter
             }
         }
 
+        /**
+         * If nothing has the Parameter, use default
+         */
         if ($this->value == "") {
             $this->value = $this->getDefaultValue();
         }
@@ -52,16 +67,26 @@ abstract class ConfigParameter
 
     public abstract function getConfigValues();
 
+    /**
+     * @param $newValue mixed The new Value
+     */
     public function setValue($newValue)
     {
         $this->value = $newValue;
     }
 
+    /**
+     * @return mixed The Value
+     */
     public function getValue()
     {
         return $this->value;
     }
 
+
+    /**
+     * Save the Value to the Session
+     */
     public function save()
     {
         $_SESSION[$this->getConfigName()] = $this->value;
