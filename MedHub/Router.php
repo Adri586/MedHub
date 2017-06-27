@@ -29,6 +29,8 @@ class Router
         MedHub()->View()->assign("config", MedHub()->Config()->rawConfig);
 
         MedHub()->View()->render($this->getSitePath());
+
+        var_dump(MedHub()->Config()->rawConfig);
     }
 
     /**

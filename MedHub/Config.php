@@ -31,7 +31,7 @@ class Config
      */
     public function __construct()
     {
-        // Iterate over all ConfigParameter
+        // Iterate over all ConfigParameter for Config Values
         foreach ($this->configValues as $configValue) {
             /**@var $configValueInstance ConfigParameter */
             $configValueInstance = new $configValue(); //Create a new Instance
@@ -39,6 +39,14 @@ class Config
             $this->rawConfig[$configValueInstance->getConfigName()] = $configValueInstance->getValue(); // Save the InstanceData to the rawConfig
 
             $configValueInstance->save(); // Save Values to Session
+        }
+
+        // Iterate over all ConfigParameter for Translations
+        foreach ($this->configValues as $configValue) {
+            /**@var $configValueInstance ConfigParameter */
+            $configValueInstance = new $configValue(); //Create a new Instance
+
+            $this->rawConfig["translation"] += $configValueInstance->getTranslationForValue($configValueInstance->getValue(), $this->rawConfig[Languages::getConfigName()]);
         }
 
         /**

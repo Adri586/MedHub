@@ -67,6 +67,8 @@ abstract class ConfigParameter
 
     public abstract function getConfigValues();
 
+    public abstract function getTranslationForValue($value, $lang);
+
     /**
      * @param $newValue mixed The new Value
      */

@@ -57,4 +57,11 @@ class RequestedSite extends ConfigParameter
     {
         return [];
     }
+
+    public function getTranslationForValue($value, $lang)
+    {
+//Nothing
+    }
+
+
 }

@@ -4,7 +4,7 @@ namespace MedHub\Config;
 
 class CustomerType extends ConfigParameter
 {
-    const DOCTOR = "doctor";
+    const MEDICAL_STAFF = "medical_staff";
     const PATIENT = "patient";
     const NULL = "null";
 
@@ -20,6 +20,56 @@ class CustomerType extends ConfigParameter
 
     public function getConfigValues()
     {
-        return [CustomerType::DOCTOR, CustomerType::PATIENT, CustomerType::NULL];
+        return [CustomerType::MEDICAL_STAFF, CustomerType::PATIENT, CustomerType::NULL];
+    }
+
+    public function getTranslationForValue($value, $lang)
+    {
+        switch ($value) {
+
+            case CustomerType::getConfigName(): {
+                switch ($lang) {
+                    case Languages::GERMAN: {
+                        return "Käuferart";
+                    }
+
+                    case Languages::ENGLISH: {
+                        return "Customer Type";
+                    }
+                }
+
+                break;
+            }
+
+            case CustomerType::MEDICAL_STAFF: {
+                switch ($lang) {
+                    case Languages::GERMAN: {
+                        return "Fachpersonal";
+                    }
+
+                    case Languages::ENGLISH: {
+                        return "Medical Staff";
+                    }
+                }
+
+                break;
+            }
+
+            case CustomerType::PATIENT: {
+                switch ($lang) {
+                    case Languages::GERMAN: {
+                        return "Patient";
+                    }
+
+                    case Languages::ENGLISH: {
+                        return "Patient";
+                    }
+                }
+
+                break;
+            }
+        }
+
+        return "Missing Translation";
     }
 }
