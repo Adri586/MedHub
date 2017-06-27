@@ -46,7 +46,9 @@ class Config
             /**@var $configValueInstance ConfigParameter */
             $configValueInstance = new $configValue(); //Create a new Instance
 
-            $this->rawConfig["translation"] += $configValueInstance->getTranslationForValue($configValueInstance->getValue(), $this->rawConfig[Languages::getConfigName()]);
+            $this->rawConfig["translation"] += [
+                $configValueInstance->getConfigName() => $configValueInstance->getTranslationForValue($configValueInstance->getValue(), $this->rawConfig[Languages::getConfigName()])
+            ];
         }
 
         /**
