@@ -19,7 +19,9 @@ class Config
     /**
      * @var array The Array where all Config Values are stored
      */
-    public $rawConfig = [];
+    public $rawConfig = [
+        "translations" => []
+    ];
 
     /**
      * @var $configValues ConfigParameter[] The ConfigParameter that the System should process
@@ -43,7 +45,7 @@ class Config
 
         // Iterate over all ConfigParameter for Translations
         foreach ($this->configValues as $configValue) {
-            $this->rawConfig["translation"] += [
+            $this->rawConfig["translations"] += [
                 $configValue::getConfigName() => $configValue::getTranslationForValue($this->rawConfig[$configValue::getConfigName()], $this->rawConfig[Languages::getConfigName()])
             ];
         }
