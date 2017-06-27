@@ -81,7 +81,7 @@
                         </li>
                         <li {if $config.customerType == "doctor"}class="active"{/if}>
                             <a onclick="setParam('customerType', 'doctor');">
-                                {if $config.language == "en"}Doctor{elseif $config.language == "de"}Doktor{/if}
+                                {if $config.language == "en"}Doctor{elseif $config.language == "de"}Fachpersonal{/if}
                             </a>
                         </li>
                     </ul>
