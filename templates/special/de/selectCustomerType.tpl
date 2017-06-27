@@ -19,7 +19,7 @@
     <div class="col-xs-2"></div>
     <div class="col-xs-3 text-center">
         <a class="btn btn-lg btn-success" onclick="setParam('customerType', 'doctor');"
-           role="button">Doktor</a>
+           role="button">Fachpersonal</a>
     </div>
     <div class="col-xs-2"></div>
 </div>
