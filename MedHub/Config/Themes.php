@@ -23,7 +23,7 @@ class Themes extends ConfigParameter
         return [Themes::DARK, Themes::BRIGHT];
     }
 
-    public function getTranslationForValue($value, $lang)
+    public static function getTranslationForValue($value, $lang)
     {
         switch ($value) {
 

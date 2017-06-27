@@ -63,11 +63,11 @@ abstract class ConfigParameter
 
     public static abstract function getConfigName();
 
+    public static abstract function getTranslationForValue($value, $lang);
+
     public abstract function getDefaultValue();
 
     public abstract function getConfigValues();
-
-    public abstract function getTranslationForValue($value, $lang);
 
     /**
      * @param $newValue mixed The new Value

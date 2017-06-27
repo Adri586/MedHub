@@ -23,7 +23,7 @@ class Languages extends ConfigParameter
         return [Languages::GERMAN, Languages::ENGLISH];
     }
 
-    public function getTranslationForValue($value, $lang)
+    public static function getTranslationForValue($value, $lang)
     {
 
         switch ($value) {

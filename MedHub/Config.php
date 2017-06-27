@@ -43,11 +43,8 @@ class Config
 
         // Iterate over all ConfigParameter for Translations
         foreach ($this->configValues as $configValue) {
-            /**@var $configValueInstance ConfigParameter */
-            $configValueInstance = new $configValue(); //Create a new Instance
-
             $this->rawConfig["translation"] += [
-                $configValueInstance->getConfigName() => $configValueInstance->getTranslationForValue($configValueInstance->getValue(), $this->rawConfig[Languages::getConfigName()])
+                $configValue->getConfigName() => $configValue->getTranslationForValue($this->rawConfig[$configValue->getConfigName()], $this->rawConfig[Languages::getConfigName()])
             ];
         }
 

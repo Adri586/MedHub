@@ -23,7 +23,7 @@ class CustomerType extends ConfigParameter
         return [CustomerType::MEDICAL_STAFF, CustomerType::PATIENT, CustomerType::NULL];
     }
 
-    public function getTranslationForValue($value, $lang)
+    public static function getTranslationForValue($value, $lang)
     {
         switch ($value) {
 
