@@ -36,7 +36,7 @@ class Config
             /**@var $configValueInstance ConfigParameter */
             $configValueInstance = new $configValue(); //Create a new Instance
 
-            $this->rawConfig[$configValueInstance->getConfigName()] = $configValueInstance->getValue(); // Save the InstanceData to the rawConfig
+            $this->rawConfig[$configValue::getConfigName()] = $configValueInstance->getValue(); // Save the InstanceData to the rawConfig
 
             $configValueInstance->save(); // Save Values to Session
         }
@@ -44,7 +44,7 @@ class Config
         // Iterate over all ConfigParameter for Translations
         foreach ($this->configValues as $configValue) {
             $this->rawConfig["translation"] += [
-                $configValue->getConfigName() => $configValue->getTranslationForValue($this->rawConfig[$configValue->getConfigName()], $this->rawConfig[Languages::getConfigName()])
+                $configValue::getConfigName() => $configValue::getTranslationForValue($this->rawConfig[$configValue::getConfigName()], $this->rawConfig[Languages::getConfigName()])
             ];
         }
 
