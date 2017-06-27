@@ -45,8 +45,12 @@ class Config
 
         // Iterate over all ConfigParameter for Translations
         foreach ($this->configValues as $configValue) {
+            
             $this->rawConfig["translations"] += [
-                $configValue::getConfigName() => $configValue::getTranslationForValue($this->rawConfig[$configValue::getConfigName()], $this->rawConfig[Languages::getConfigName()])
+                $configValue::getConfigName() => [
+                    "label" => $configValue::getTranslationForValue($configValue::getConfigName(), $this->rawConfig[Languages::getConfigName()]),
+                    "value" => $configValue::getTranslationForValue($this->rawConfig[$configValue::getConfigName()], $this->rawConfig[Languages::getConfigName()])
+                ]
             ];
         }
 

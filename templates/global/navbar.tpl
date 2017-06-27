@@ -24,6 +24,9 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
+
+                    {$config["translations"]["language"]}
+
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100"
                        data-close-others="true" role="button" aria-haspopup="true"
                        aria-expanded="false">
@@ -32,6 +35,7 @@
                     <ul class="dropdown-menu">
                         <li {if $config.language == "de"}class="active"{/if}>
                             <a onclick="setParam('language', 'de');">
+
                                 {if $config.language == "en"}German{elseif $config.language == "de"}Deutsch{/if}
                             </a>
                         </li>
