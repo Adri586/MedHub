@@ -14,4 +14,5 @@
 <script src="/web/js/vendor/particles.min.js"></script>
 <script src="/web/js/vendor/cheet.min.js"></script>
 <script src="/web/js/global.js"></script>
+<script src="/web/js/random.js"></script>
 </html>
