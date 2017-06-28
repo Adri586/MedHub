@@ -21,6 +21,9 @@
                     <a href="/information" {if $config.requestedSite == "information"} class="active" {/if}>{if $config.language == "en"}Information{elseif $config.language == "de"}Information{/if}</a>
                 </li>
                 <li>
+                    <a href="/dasbietet" {if $config.requestedSite == "dasbietet"} class="active" {/if}>{if $config.language == "en"}About MedHub{elseif $config.language == "de"}Das bietet IhnenMedHub{/if}</a>
+                </li>
+                <li>
                     <a href="/impressum" {if $config.requestedSite == "impressum"} class="active" {/if}>{if $config.language == "en"}Legal notice{elseif $config.language == "de"}Impressum{/if}</a>
                 </li>
 
