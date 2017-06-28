@@ -2,7 +2,7 @@
 {include file="../../global/navbar.tpl"}
 <div class="jumbotron">
     <div class="container">
-        <h1>Welcome to MedHub,</h1>
+        <p>Welcome to MedHub,</p>
 
         <p>here you will find information about our app, "MedHub", which is available for Android and iOS devices.
             MedHub makes life easier for patients and medical staff by eliminating paper-based prescriptions and moving

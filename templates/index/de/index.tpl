@@ -2,7 +2,7 @@
 {include file="../../global/navbar.tpl"}
 <div class="jumbotron">
     <div class="container">
-        <h1>Willkommen auf MedHub,</h1>
+        <p>Willkommen auf MedHub,</p>
 
         <p>hier finden sie Informationen zu unserer Applikation, "MedHub", die sowohl auf mobilen Endgeräten für
             Patienten, als auch auf Desktopcomputern für medizinisches Fachpersonal verfügbar ist. MedHub erleichtert
