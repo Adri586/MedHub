@@ -20,18 +20,23 @@
             <br>
             <p>Dann schreiben sie uns: (Email) .</p>
         {elseif $config.customerType == "medical_staff"}
-            <p> Wechselwirkungen? Verfügbarkeit? Einnahmesicherheit?
-                Immer mehr Menschen nehmen mehr als ein verschreibungspflichtiges Medikament, häufig von
-                unterschiedlichen Fachärzten verordnet.
-                Wir bieten ihnen und ihren Patienten einen einfachen und sicheren Weg, den Überblick im Tablettenjungle
-                zu behalten. {$config.pageName}.
-                Sparen sie Zeit und Geld bei der Erstellung von Rezepten. Nutzen sie unsere Datenbank zum automatischen
-                Vergleich von Wechselwirkung und Verordnungsrichtlinien.
-                Schaffen sie Freiräume, um wieder mehr Zeit für das persönliche Gespräch mit ihren Patienten zu haben.
+            <p class="text-warning">Wechselwirkungen? Verfügbarkeit? Einnahmesicherheit?</p>
+            <br>
+            <p>Immer mehr Menschen nehmen mehr als ein verschreibungspflichtiges Medikament, häufig von
+                unterschiedlichen Fachärzten verordnet.</p>
+            <p>Wir bieten ihnen und ihren Patienten einen einfachen und sicheren Weg, den Überblick im Tablettenjungle
+                zu behalten.</p>
+            <br>
+            <p>Sparen sie Zeit und Geld bei der Erstellung von Rezepten. Nutzen sie unsere Datenbank zum automatischen
+                Vergleich von Wechselwirkung und Verordnungsrichtlinien.</p>
+            <p>Schaffen sie Freiräume, um wieder mehr Zeit für das persönliche Gespräch mit ihren Patienten zu haben.
                 Unsere BSI zertifizierte Plattform und Anwendung schafft maximale Sicherheit und Übersicht und bietet
                 Ihnen und Ihrem Praxisteam die Möglichkeit, zeiteffizient zu arbeiten. Dabei steht stets der Mensch und
-                sein Wohlbefinden im Mittelpunkt.
-                Haben wir ihr Interesse geweckt? Dann schreiben sie uns: (Email) </p>
+                sein Wohlbefinden im Mittelpunkt.</p>
+            <br>
+            <p>Haben wir ihr Interesse geweckt?</p>
+            <br>
+            <p>Dann schreiben sie uns: (Email) .</p>
         {/if}
 
 
