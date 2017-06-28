@@ -3,6 +3,9 @@ particlesJS.load('particles-js', '/web/assets/particlesjs-config.json', function
     console.log('callback - particles.js config loaded');
 });
 
+cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
+    alert('Voilà!');
+});
 
 function setParam(name, value) {
     var l = window.location;
