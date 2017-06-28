@@ -14,14 +14,12 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li {if $config.requestedSite == "index"} class="active" {/if}><a href="/">Home</a></li>
-                <li>
-                    <a href="/about" {if $config.requestedSite == "about"} class="active" {/if}>{if $config.language == "en"}About us{elseif $config.language == "de"}Über uns{/if}</a>
-                </li>
+
                 <li>
                     <a href="/information" {if $config.requestedSite == "information"} class="active" {/if}>{if $config.language == "en"}Information{elseif $config.language == "de"}Information{/if}</a>
                 </li>
                 <li>
-                    <a href="/dasbietet" {if $config.requestedSite == "dasbietet"} class="active" {/if}>{if $config.language == "en"}About MedHub{elseif $config.language == "de"}Das bietet IhnenMedHub{/if}</a>
+                    <a href="/about" {if $config.requestedSite == "about"} class="active" {/if}>{if $config.language == "en"}About {$config.pageName}{elseif $config.language == "de"}Über {$config.pageName}{/if}</a>
                 </li>
                 <li>
                     <a href="/impressum" {if $config.requestedSite == "impressum"} class="active" {/if}>{if $config.language == "en"}Legal notice{elseif $config.language == "de"}Impressum{/if}</a>

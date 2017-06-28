@@ -9,7 +9,7 @@
             <p>
                 100 mg in the morning, 200 mg in the evening. Two tablets of these meds at noon, another one every three days...
                 Have you lost track in the mess of tablets? Do the pharmacological interactions cause anxiety? Do you spend more time extending your recipes and increasing your medical stock than with your loved ones or at work?
-                Let us help! MedHub provides easy-to-understand and secure support in everyday life
+                Let us help! {$config.pageName} provides easy-to-understand and secure support in everyday life
 
                 Enjoy the beautiful things of life while leaving theplanning of your intake cycles to us.
 
