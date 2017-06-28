@@ -2,11 +2,9 @@
 {include file="../../global/navbar.tpl"}
 <div class="jumbotron">
     <div class="container">
-        <h1>Information</h1>
-
+        <h2>Ihre Vorteile</h2>
         {if $config.customerType == "patient"}
-            <h2>Vorteile für Sie</h2>
-            <p class="text-primary">Morgens 100 mg, abends 200 mg. Mittags zwei Tabletten von diesem Medikament, alle
+            <p class="text-warning">Morgens 100 mg, abends 200 mg. Mittags zwei Tabletten von diesem Medikament, alle
                 drei Tage jenes…</p>
             <br>
             <p>Haben sie den Überblick im Tablettenjungel verloren? Machen ihnen Wechselwirkungen Angst? </p>
@@ -22,7 +20,6 @@
             <br>
             <p>Dann schreiben sie uns: (Email) .</p>
         {elseif $config.customerType == "medical_staff"}
-            <h2>Vorteile für Sie</h2>
             <p> Wechselwirkungen? Verfügbarkeit? Einnahmesicherheit?
                 Immer mehr Menschen nehmen mehr als ein verschreibungspflichtiges Medikament, häufig von
                 unterschiedlichen Fachärzten verordnet.
