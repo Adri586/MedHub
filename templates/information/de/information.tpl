@@ -2,7 +2,7 @@
 {include file="../../global/navbar.tpl"}
 <div class="jumbotron">
     <div class="container">
-        <h1>Impressum</h1>
+        <h1>Information</h1>
 
         {if $config.customerType == "patient"}
             <h2>Sie sind nur ein Opfer der Pharmaindustrie</h2>
