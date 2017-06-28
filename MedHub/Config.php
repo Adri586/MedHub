@@ -4,6 +4,7 @@ namespace MedHub;
 
 use MedHub\Config\ConfigParameter;
 use MedHub\Config\CustomerType;
+use MedHub\Config\EasyLang;
 use MedHub\Config\Languages;
 use MedHub\Config\RequestedSite;
 use MedHub\Config\Themes;
@@ -26,7 +27,7 @@ class Config
     /**
      * @var $configValues ConfigParameter[] The ConfigParameter that the System should process
      */
-    private $configValues = [Languages::class, Themes::class, RequestedSite::class, CustomerType::class];
+    private $configValues = [Languages::class, Themes::class, RequestedSite::class, CustomerType::class, EasyLang::class];
 
     /**
      * Config constructor.
