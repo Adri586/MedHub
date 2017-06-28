@@ -7,6 +7,10 @@ cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
     alert('Voilà!');
 });
 
+cheet('r u s h b', function () {
+    $('p').each(function () { $(this).text("Cyka Blyat") })
+});
+
 function setParam(name, value) {
     var l = window.location;
 
