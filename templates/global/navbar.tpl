@@ -43,6 +43,24 @@
                                 </a>
                             </li>
                         {/foreach}
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                               data-delay="100"
+                               data-close-others="true" role="button" aria-haspopup="true"
+                               aria-expanded="false">
+                                {$config["translations"]["easylang"]["label"]}
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                {foreach $config["translations"]["easylang"]["values"] as $key => $value}
+                                    <li {if $config.easylang == $key}class="active"{/if}>
+                                        <a onclick="setParam('easylang', '{$key}');">
+                                            {$value}
+                                        </a>
+                                    </li>
+                                {/foreach}
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -65,7 +83,7 @@
                     </ul>
                 </li>
             </ul>
-            
+
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100"
