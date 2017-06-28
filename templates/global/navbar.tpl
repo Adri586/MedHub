@@ -31,10 +31,10 @@
                         {$config["translations"]["language"]["label"]}
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        {foreach $config["translations"]["language"]["values"] as $languageKey => $language}
-                            <li {if $config.language == $languageKey}class="active"{/if}>
-                                <a onclick="setParam('language', '{$languageKey}');">
-                                    {$language}
+                        {foreach $config["translations"]["language"]["values"] as $key => $value}
+                            <li {if $config.language == $key}class="active"{/if}>
+                                <a onclick="setParam('language', '{$key}');">
+                                    {$value}
                                 </a>
                             </li>
                         {/foreach}
@@ -50,10 +50,10 @@
                         {$config["translations"]["theme"]["label"]}
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        {foreach $config["translations"]["theme"]["values"] as $languageKey => $language}
-                            <li {if $config.language == $languageKey}class="active"{/if}>
-                                <a onclick="setParam('theme', '{$languageKey}');">
-                                    {$language}
+                        {foreach $config["translations"]["theme"]["values"] as $key => $value}
+                            <li {if $config.theme == $key}class="active"{/if}>
+                                <a onclick="setParam('theme', '{$key}');">
+                                    {$value}
                                 </a>
                             </li>
                         {/foreach}
@@ -69,11 +69,11 @@
                         {$config["translations"]["customerType"]["label"]}
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        {foreach $config["translations"]["customerType"]["values"] as $languageKey => $language}
-                            {if $languageKey != "null"}
-                                <li {if $config.language == $languageKey}class="active"{/if}>
-                                    <a onclick="setParam('customerType', '{$languageKey}');">
-                                        {$language}
+                        {foreach $config["translations"]["customerType"]["values"] as $key => $value}
+                            {if $key != "null"}
+                                <li {if $config.customerType == $key}class="active"{/if}>
+                                    <a onclick="setParam('customerType', '{$key}');">
+                                        {$value}
                                     </a>
                                 </li>
                             {/if}
