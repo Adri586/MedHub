@@ -18,11 +18,12 @@
                     <a href="/about" {if $config.requestedSite == "about"} class="active" {/if}>{if $config.language == "en"}About us{elseif $config.language == "de"}Über uns{/if}</a>
                 </li>
                 <li>
-                    <a href="/impressum" {if $config.requestedSite == "impressum"} class="active" {/if}>{if $config.language == "en"}Legal notice{elseif $config.language == "de"}Impressum{/if}</a>
-                </li>
-                <li>
                     <a href="/information" {if $config.requestedSite == "information"} class="active" {/if}>{if $config.language == "en"}Information{elseif $config.language == "de"}Information{/if}</a>
                 </li>
+                <li>
+                    <a href="/impressum" {if $config.requestedSite == "impressum"} class="active" {/if}>{if $config.language == "en"}Legal notice{elseif $config.language == "de"}Impressum{/if}</a>
+                </li>
+
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
