@@ -30,6 +30,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100"
                        data-close-others="true" role="button" aria-haspopup="true"
                        aria-expanded="false">
+
                         {if $config.language == "en"}Language{elseif $config.language == "de"}Sprache{/if}
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
