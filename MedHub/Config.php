@@ -66,7 +66,7 @@ class Config
          * Adding some Basic Information about the Website
          */
         $this->rawConfig += [
-            "pageName" => "Raider",
+            "pageName" => "MedHub",
             "pageSlogan" => [
                 "de" => "Einfacher Medikamente organisieren",
                 "en" => "Easier Medicine management"
