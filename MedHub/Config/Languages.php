@@ -48,7 +48,7 @@ class Languages extends ConfigParameter
                     }
 
                     case Languages::ENGLISH: {
-                        return "Englisch";
+                        return "German";
                     }
                 }
 
@@ -58,7 +58,7 @@ class Languages extends ConfigParameter
             case Languages::ENGLISH: {
                 switch ($lang) {
                     case Languages::GERMAN: {
-                        return "German";
+                        return "Englisch";
                     }
 
                     case Languages::ENGLISH: {

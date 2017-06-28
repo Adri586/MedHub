@@ -25,26 +25,19 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
 
-                    {$config["translations"]["language"]}
-
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100"
                        data-close-others="true" role="button" aria-haspopup="true"
                        aria-expanded="false">
-
-                        {if $config.language == "en"}Language{elseif $config.language == "de"}Sprache{/if}
+                        {$config["translations"]["language"]["label"]}
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li {if $config.language == "de"}class="active"{/if}>
-                            <a onclick="setParam('language', 'de');">
-
-                                {if $config.language == "en"}German{elseif $config.language == "de"}Deutsch{/if}
-                            </a>
-                        </li>
-                        <li {if $config.language == "en"}class="active"{/if}>
-                            <a onclick="setParam('language', 'en');">
-                                {if $config.language == "en"}English{elseif $config.language == "de"}Englisch{/if}
-                            </a>
-                        </li>
+                        {foreach $config["translations"]["language"]["values"] as $languageKey => $language}
+                            <li {if $config.language == $languageKey}class="active"{/if}>
+                                <a onclick="setParam('language', '{$languageKey}');">
+                                    {$language}
+                                </a>
+                            </li>
+                        {/foreach}
                     </ul>
                 </li>
             </ul>
@@ -54,41 +47,37 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100"
                        data-close-others="true" role="button" aria-haspopup="true"
                        aria-expanded="false">
-                        {if $config.language == "en"}Theme{elseif $config.language == "de"}Design{/if}
+                        {$config["translations"]["theme"]["label"]}
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li {if $config.theme == "dark"}class="active"{/if}>
-                            <a onclick="setParam('theme', 'dark');">
-                                {if $config.language == "en"}Dark{elseif $config.language == "de"}Dunkel{/if}
-                            </a>
-                        </li>
-                        <li {if $config.theme == "bright"}class="active"{/if}>
-                            <a onclick="setParam('theme', 'bright');">
-                                {if $config.language == "en"}Bright{elseif $config.language == "de"}Hell{/if}
-                            </a>
-                        </li>
+                        {foreach $config["translations"]["theme"]["values"] as $languageKey => $language}
+                            <li {if $config.language == $languageKey}class="active"{/if}>
+                                <a onclick="setParam('theme', '{$languageKey}');">
+                                    {$language}
+                                </a>
+                            </li>
+                        {/foreach}
                     </ul>
                 </li>
             </ul>
-
+            
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100"
                        data-close-others="true" role="button" aria-haspopup="true"
                        aria-expanded="false">
-                        {if $config.language == "en"}Customer Type{elseif $config.language == "de"}Käuferart{/if}
+                        {$config["translations"]["customerType"]["label"]}
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li {if $config.customerType == "patient"}class="active"{/if}>
-                            <a onclick="setParam('customerType', 'patient');">
-                                {if $config.language == "en"}Patient{elseif $config.language == "de"}Patient{/if}
-                            </a>
-                        </li>
-                        <li {if $config.customerType == "doctor"}class="active"{/if}>
-                            <a onclick="setParam('customerType', 'doctor');">
-                                {if $config.language == "en"}Medical staff{elseif $config.language == "de"}Fachpersonal{/if}
-                            </a>
-                        </li>
+                        {foreach $config["translations"]["customerType"]["values"] as $languageKey => $language}
+                            {if $languageKey != "null"}
+                                <li {if $config.language == $languageKey}class="active"{/if}>
+                                    <a onclick="setParam('customerType', '{$languageKey}');">
+                                        {$language}
+                                    </a>
+                                </li>
+                            {/if}
+                        {/foreach}
                     </ul>
                 </li>
             </ul>
