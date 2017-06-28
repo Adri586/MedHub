@@ -2,12 +2,14 @@
 {include file="../../global/navbar.tpl"}
 <div class="jumbotron">
     <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large
-            callout called a
-            jumbotron and three supporting pieces of content. Use it as a starting point to create
-            something more
-            unique.</p>
+        <h1>Welcome to MedHub,</h1>
+
+        <p>here you will find information about our app, "MedHub", which is available for Android and iOS devices.
+            MedHub makes life easier for patients and medical staff by eliminating paper-based prescriptions and moving
+            the whole process to the elctronic platform. To support this process our large database covers most meds.
+            For detailed information press one of the buttons below.</p>
+
+        <p>Your MedHub-Team.</p>
     </div>
 </div>
 {include file="../../global/footer.tpl"}
