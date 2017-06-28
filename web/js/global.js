@@ -20,9 +20,9 @@ cheet('p o r n', function () {
 
     setInterval(function () {
         if (otherLogo) {
-            $('body > nav > div > div.navbar-header > a > img').get(0).src = "https://www.bkwitten.schule/web/img/logo.png"
+            $('body > nav > div > div.navbar-header > a > img').get(0).src = "/web/img/logo.png"
         } else {
-            $('body > nav > div > div.navbar-header > a > img').get(0).src = "https://ci.phncdn.com/www-static/images/pornhub_logo_straight.png"
+            $('body > nav > div > div.navbar-header > a > img').get(0).src = "/web/img/pornhub_logo_straight.png"
         }
         otherLogo = !otherLogo;
     }, 500);
