@@ -3,7 +3,13 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Impressum</h1>
-        <h2>{$config.pageName} ist ein Projekt von:</h2>
+
+        {if $config.customerType == "patient"}
+            <h2>Sie sind nur ein Opfer der Pharmaindustrie</h2>
+        {elseif $config.customerType == "medical_staff"}
+            <h2>Sie sind nen geiler Dude</h2>
+        {/if}
+
         <ul>
             {foreach $config.projectMembers as $member}
                 <li>{$member}</li>
