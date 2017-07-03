@@ -29,6 +29,7 @@ class CustomerType extends ConfigParameter
 
             case CustomerType::getConfigName(): {
                 switch ($lang) {
+                    case Languages::GERMAN_EASY:
                     case Languages::GERMAN: {
                         return "Käuferart";
                     }
@@ -43,6 +44,7 @@ class CustomerType extends ConfigParameter
 
             case CustomerType::MEDICAL_STAFF: {
                 switch ($lang) {
+                    case Languages::GERMAN_EASY:
                     case Languages::GERMAN: {
                         return "Fachpersonal";
                     }
@@ -57,6 +59,7 @@ class CustomerType extends ConfigParameter
 
             case CustomerType::PATIENT: {
                 switch ($lang) {
+                    case Languages::GERMAN_EASY:
                     case Languages::GERMAN: {
                         return "Patient";
                     }

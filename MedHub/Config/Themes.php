@@ -29,6 +29,7 @@ class Themes extends ConfigParameter
 
             case Themes::getConfigName(): {
                 switch ($lang) {
+                    case Languages::GERMAN_EASY:
                     case Languages::GERMAN: {
                         return "Design";
                     }
@@ -43,6 +44,7 @@ class Themes extends ConfigParameter
 
             case Themes::DARK: {
                 switch ($lang) {
+                    case Languages::GERMAN_EASY:
                     case Languages::GERMAN: {
                         return "Dunkel";
                     }
@@ -57,6 +59,7 @@ class Themes extends ConfigParameter
 
             case Themes::BRIGHT: {
                 switch ($lang) {
+                    case Languages::GERMAN_EASY:
                     case Languages::GERMAN: {
                         return "Hell";
                     }

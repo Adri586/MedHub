@@ -16,13 +16,13 @@
                 <li {if $config.requestedSite == "index"} class="active" {/if}><a href="/">Home</a></li>
 
                 <li>
-                    <a href="/information" {if $config.requestedSite == "information"} class="active" {/if}>{if $config.language == "en"}Information{elseif $config.language == "de"}Information{/if}</a>
+                    <a href="/information" {if $config.requestedSite == "information"} class="active" {/if}>{if $config.language == "en"}Information{elseif $config.language == "de" || $config.language == "de_easy"}Information{/if}</a>
                 </li>
                 <li>
-                    <a href="/about" {if $config.requestedSite == "about"} class="active" {/if}>{if $config.language == "en"}About {$config.pageName}{elseif $config.language == "de"}Über {$config.pageName}{/if}</a>
+                    <a href="/about" {if $config.requestedSite == "about"} class="active" {/if}>{if $config.language == "en"}About {$config.pageName}{elseif $config.language == "de" || $config.language == "de_easy"}Über {$config.pageName}{/if}</a>
                 </li>
                 <li>
-                    <a href="/impressum" {if $config.requestedSite == "impressum"} class="active" {/if}>{if $config.language == "en"}Legal notice{elseif $config.language == "de"}Impressum{/if}</a>
+                    <a href="/impressum" {if $config.requestedSite == "impressum"} class="active" {/if}>{if $config.language == "en"}Legal notice{elseif $config.language == "de" || $config.language == "de_easy"}Impressum{/if}</a>
                 </li>
 
             </ul>
@@ -43,24 +43,6 @@
                                 </a>
                             </li>
                         {/foreach}
-
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                               data-delay="100"
-                               data-close-others="false" role="button" aria-haspopup="true"
-                               aria-expanded="false">
-                                {$config["translations"]["easylang"]["label"]}
-                                <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                {foreach $config["translations"]["easylang"]["values"] as $key => $value}
-                                    <li {if $config.easylang == $key}class="active"{/if}>
-                                        <a onclick="setParam('easylang', '{$key}');">
-                                            {$value}
-                                        </a>
-                                    </li>
-                                {/foreach}
-                            </ul>
-                        </li>
                     </ul>
                 </li>
             </ul>

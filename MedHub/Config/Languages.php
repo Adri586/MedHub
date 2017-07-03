@@ -6,6 +6,7 @@ class Languages extends ConfigParameter
 {
     const GERMAN = "de";
     const ENGLISH = "en";
+    const GERMAN_EASY = "de_easy";
 
 
     public static function getConfigName()
@@ -20,7 +21,7 @@ class Languages extends ConfigParameter
 
     public function getConfigValues()
     {
-        return [Languages::GERMAN, Languages::ENGLISH];
+        return [Languages::GERMAN, Languages::GERMAN_EASY, Languages::ENGLISH];
     }
 
     public static function getTranslationForValue($value, $lang)
@@ -29,6 +30,7 @@ class Languages extends ConfigParameter
         switch ($value) {
             case Languages::getConfigName(): {
                 switch ($lang) {
+                    case Languages::GERMAN_EASY:
                     case Languages::GERMAN: {
                         return "Sprache";
                     }
@@ -43,6 +45,7 @@ class Languages extends ConfigParameter
 
             case Languages::GERMAN: {
                 switch ($lang) {
+                    case Languages::GERMAN_EASY:
                     case Languages::GERMAN: {
                         return "Deutsch";
                     }
@@ -57,6 +60,7 @@ class Languages extends ConfigParameter
 
             case Languages::ENGLISH: {
                 switch ($lang) {
+                    case Languages::GERMAN_EASY:
                     case Languages::GERMAN: {
                         return "Englisch";
                     }
@@ -67,6 +71,19 @@ class Languages extends ConfigParameter
                 }
 
                 break;
+            }
+
+            case Languages::GERMAN_EASY: {
+                switch ($lang) {
+                    case Languages::GERMAN_EASY:
+                    case Languages::GERMAN: {
+                        return "Deutsch (Einfach)";
+                    }
+
+                    case Languages::ENGLISH: {
+                        return "German (Easy)";
+                    }
+                }
             }
         }
 

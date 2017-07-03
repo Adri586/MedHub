@@ -27,7 +27,7 @@ class Config
     /**
      * @var $configValues ConfigParameter[] The ConfigParameter that the System should process
      */
-    private $configValues = [Languages::class, Themes::class, RequestedSite::class, CustomerType::class, EasyLang::class];
+    private $configValues = [Languages::class, Themes::class, RequestedSite::class, CustomerType::class];
 
     /**
      * Config constructor.
@@ -70,6 +70,7 @@ class Config
             "pageName" => "MedHub",
             "pageSlogan" => [
                 "de" => "Einfacher Medikamente organisieren",
+                "de_easy" => "Einfacher Medikamente organisieren",
                 "en" => "Easier Medicine management"
             ],
             "logoUrl" => "/web/img/logo.png",
