@@ -2,15 +2,11 @@
 {include file="../../global/navbar.tpl"}
 <div class="jumbotron">
     <div class="container">
-        <h2>Willkommen auf {$config.pageName},</h2>
+        <h2>Willkommen auf {$config.pageName}</h2>
 
-        <p>hier finden sie Informationen zu unserer Applikation, "{$config.pageName}", die sowohl auf mobilen Endgeräten
-            für Patienten, als auch auf Desktopcomputern für medizinisches Fachpersonal verfügbar ist.</p>
+        <p>Hier lernen Sie {$config.pageName} kennen. Diese App funktioniert auf Ihrem Handy. Und auch auf Ihrem Computer.</p>
 
-        <p>{$config.pageName} erleichtert den Alltag vor Allem im Bereich Zeit und Arbeitsaufwand, da wir das Konzept
-            papierbasierter Rezepte digitalisieren, und durch unsere breit gefächerte Datenbank unterstützen.</p>
-
-        <p>Für detaillierte Informationen klicken sie bitte auf den entsprechenden Button.</p>
+        <p>Vergessen Sie nie wieder eine Tablette. Drücken Sie auf den Knopf für mehr Informationen.</p>
 
         <p>Ihr {$config.pageName}-Team.</p>
     </div>
