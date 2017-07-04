@@ -27,7 +27,7 @@
 
             </ul>
 
-            <a class="nav navbar-nav navbar-right easy_lang" onclick="setParam('language', 'de_easy');"><img src="/web/img/easy_lang.png" alt="{if $config.language == "en"}Easy Lang{elseif $config.language == "de" || $config.language == "de_easy"}Einfache Sprache{/if}"></a>
+            <a class="nav navbar-nav navbar-right easy_lang" onclick="setParam('language', 'de_easy');" href="#"><img src="/web/img/easy_lang.png" alt="{if $config.language == "en"}Easy Lang{elseif $config.language == "de" || $config.language == "de_easy"}Einfache Sprache{/if}"></a>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
 
