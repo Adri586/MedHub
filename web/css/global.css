@@ -75,6 +75,14 @@ Button Color
 }
 
 /**
+Easylang Button
+ */
+.easy_lang > img {
+    height: 40px;
+    margin-top: 5px;
+}
+
+/**
 Footer
  */
 

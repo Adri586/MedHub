@@ -27,6 +27,7 @@
 
             </ul>
 
+            <a class="nav navbar-nav navbar-right easy_lang" onclick="setParam('language', 'de_easy');"><img src="/web/img/easy_lang.png" alt="MedHub"></a>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
 
