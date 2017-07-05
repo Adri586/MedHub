@@ -4,7 +4,10 @@
     <div class="container">
         <h2>Preise</h2>
         {if $config.customerType == "patient"}
-            <p>Für sie ist Medhub kostenlos :)</p>
+            <script>
+                location.href = window.location.origin;
+            </script>
+            <p>Für sie ist Medhub kostenlos</p>
         {elseif $config.customerType == "medical_staff"}
             <table class="table">
                 <tr>

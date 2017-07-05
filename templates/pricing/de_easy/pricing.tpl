@@ -3,7 +3,10 @@
 <div class="jumbotron">
     <div class="container">
         <h2>Preise</h2>
-        <p>Für sie ist Medhub kostenlos :)</p>
+        <script>
+            location.href = window.location.origin;
+        </script>
+        <p>Für sie ist Medhub kostenlos</p>
     </div>
 </div>
 {include file="../../global/footer.tpl"}
