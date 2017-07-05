@@ -15,6 +15,14 @@
     {if $config.theme == "dark"}
         <link rel="stylesheet" href="/web/css/dark_theme.css">
     {/if}
+
+    {if $config.customerType == "patient"}
+        <link rel="stylesheet" href="/web/css/patient_styles.css">
+    {/if}
+
+    {if $config.customerType == "medical_staff"}
+        <link rel="stylesheet" href="/web/css/medical_staff_styles.css">
+    {/if}
 </head>
 <body>
 <div id="particles-js"></div>
