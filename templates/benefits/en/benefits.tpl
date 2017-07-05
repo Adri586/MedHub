@@ -14,13 +14,14 @@
                     ones or at work?</p>
                 <br>
                 <p>Let us help! {$config.pageName} provides easy-to-understand and secure support in everyday life</p>
-                <p>Enjoy the beautiful things of life while leaving the planning of your intake cycles to us.</p></div>
+                <p>Enjoy the beautiful things of life while leaving the planning of your intake cycles to us.</p>
+                <br>
+                <p>Have we piqued your interest?</p>
+                <br>
+                <p>Then write to us: EMAIL EINFÜGEN</p>
+            </div>
             <div class="col-md-3"><img src="/web/img/screenshot_2.jpeg" class="img-responsive img-rounded"
                                        style="max-width: 100%;"></div>
-            <br>
-            <p>Have we piqued your interest?</p>
-            <br>
-            <p>Then write to us: EMAIL EINFÜGEN</p>
         {elseif $config.customerType == "medical_staff"}
             <h2>Sie sind nen geiler Dude</h2>
             <p> Doktor DoktoDoktor DoktoDoktor DoktoDoktor DoktoDoktor DoktoDoktor DoktoDoktor Doktor</p>
