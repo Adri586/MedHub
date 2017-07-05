@@ -18,7 +18,7 @@
             <br>
             <p>Haben wir ihr Interesse geweckt?</p>
             <br>
-            <p>Dann schreiben sie uns: (Email)</p>
+            <p>Dann schreiben sie uns: EMAIL EINFÜGEN</p>
         {elseif $config.customerType == "medical_staff"}
             <p class="text-warning">Wechselwirkungen? Verfügbarkeit? Einnahmesicherheit?</p>
             <br>
