@@ -25,3 +25,7 @@ body {
     color: #ab5f00;
     background-color: transparent;
 }
+
+#particles-js canvas {
+    background: rgb(33, 36, 50) !important;
+}

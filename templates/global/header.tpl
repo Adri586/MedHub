@@ -12,16 +12,16 @@
     <link rel="stylesheet" href="/web/css/vendor/font-awesome.min.css">
     <link rel="stylesheet" href="/web/css/global.css">
 
-    {if $config.theme == "dark"}
-        <link rel="stylesheet" href="/web/css/dark_theme.css">
-    {/if}
-
     {if $config.customerType == "patient"}
         <link rel="stylesheet" href="/web/css/patient_styles.css">
     {/if}
 
     {if $config.customerType == "medical_staff"}
         <link rel="stylesheet" href="/web/css/medical_staff_styles.css">
+    {/if}
+
+    {if $config.theme == "dark"}
+        <link rel="stylesheet" href="/web/css/dark_theme.css">
     {/if}
 </head>
 <body>
