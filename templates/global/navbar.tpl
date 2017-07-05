@@ -19,7 +19,7 @@
                     <a href="/information" {if $config.requestedSite == "information"} class="active" {/if}>{if $config.language == "en"}Information{elseif $config.language == "de" || $config.language == "de_easy"}Information{/if}</a>
                 </li>
                 <li>
-                    <a href="/about" {if $config.requestedSite == "about"} class="active" {/if}>{if $config.language == "en"}About {$config.pageName}{elseif $config.language == "de" || $config.language == "de_easy"}Über {$config.pageName}{/if}</a>
+                    <a href="/benefits" {if $config.requestedSite == "benefits"} class="active" {/if}>{if $config.language == "en"}Benefits{elseif $config.language == "de" || $config.language == "de_easy"}Vorteile{/if}</a>
                 </li>
                 <li>
                     <a href="/impressum" {if $config.requestedSite == "impressum"} class="active" {/if}>{if $config.language == "en"}Legal notice{elseif $config.language == "de" || $config.language == "de_easy"}Impressum{/if}</a>
