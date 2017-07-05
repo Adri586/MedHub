@@ -15,19 +15,19 @@
             <ul class="nav navbar-nav">
                 <li {if $config.requestedSite == "index"} class="active" {/if}><a href="/">Home</a></li>
 
-                <li>
-                    <a href="/information" {if $config.requestedSite == "information"} class="active" {/if}>{if $config.language == "en"}Information{elseif $config.language == "de" || $config.language == "de_easy"}Information{/if}</a>
+                <li {if $config.requestedSite == "information"} class="active" {/if}>
+                    <a href="/information">{if $config.language == "en"}Information{elseif $config.language == "de" || $config.language == "de_easy"}Information{/if}</a>
                 </li>
-                <li>
-                    <a href="/benefits" {if $config.requestedSite == "benefits"} class="active" {/if}>{if $config.language == "en"}Benefits{elseif $config.language == "de" || $config.language == "de_easy"}Vorteile{/if}</a>
+                <li {if $config.requestedSite == "benefits"} class="active" {/if}>
+                    <a href="/benefits">{if $config.language == "en"}Benefits{elseif $config.language == "de" || $config.language == "de_easy"}Vorteile{/if}</a>
                 </li>
                 {if $config.customerType == "medical_staff"}
-                    <li>
-                        <a href="/pricing" {if $config.requestedSite == "pricing"} class="active" {/if}>{if $config.language == "en"}Pricing{elseif $config.language == "de" || $config.language == "de_easy"}Preise{/if}</a>
+                    <li  {if $config.requestedSite == "pricing"} class="active" {/if}>
+                        <a href="/pricing">{if $config.language == "en"}Pricing{elseif $config.language == "de" || $config.language == "de_easy"}Preise{/if}</a>
                     </li>
                 {/if}
-                <li>
-                    <a href="/impressum" {if $config.requestedSite == "impressum"} class="active" {/if}>{if $config.language == "en"}Legal notice{elseif $config.language == "de" || $config.language == "de_easy"}Impressum{/if}</a>
+                <li {if $config.requestedSite == "impressum"} class="active" {/if}>
+                    <a href="/impressum">{if $config.language == "en"}Legal notice{elseif $config.language == "de" || $config.language == "de_easy"}Impressum{/if}</a>
                 </li>
 
             </ul>
