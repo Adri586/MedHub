@@ -7,12 +7,16 @@
             <p class="text-warning">100 mg in the morning, 200 mg in the evening. Two tablets of these meds at noon,
                 another one every three days...</p>
             <br>
-            <p>Have you lost track in the mess of tablets? Do the pharmacological interactions cause anxiety?</p>
-            <p>Do you spend more time extending your recipes and increasing your medical stock than with your loved ones or at
-                work?</p>
-            <br>
-            <p>Let us help! {$config.pageName} provides easy-to-understand and secure support in everyday life</p>
-            <p>Enjoy the beautiful things of life while leaving the planning of your intake cycles to us.</p>
+            <div class="col-md-9">
+                <p>Have you lost track in the mess of tablets? Do the pharmacological interactions
+                    cause anxiety?</p>
+                <p>Do you spend more time extending your recipes and increasing your medical stock than with your loved
+                    ones or at work?</p>
+                <br>
+                <p>Let us help! MedHub provides easy-to-understand and secure support in everyday life</p>
+                <p>Enjoy the beautiful things of life while leaving the planning of your intake cycles to us.</p></div>
+            <div class="col-md-3"><img src="/web/img/screenshot_2.jpeg" class="img-responsive img-rounded"
+                                       style="max-width: 100%;"></div>
             <br>
             <p>Have we piqued your interest?</p>
             <br>
