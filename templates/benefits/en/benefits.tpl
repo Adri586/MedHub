@@ -13,7 +13,7 @@
                 <p>Do you spend more time extending your recipes and increasing your medical stock than with your loved
                     ones or at work?</p>
                 <br>
-                <p>Let us help! MedHub provides easy-to-understand and secure support in everyday life</p>
+                <p>Let us help! {$config.pageName} provides easy-to-understand and secure support in everyday life</p>
                 <p>Enjoy the beautiful things of life while leaving the planning of your intake cycles to us.</p></div>
             <div class="col-md-3"><img src="/web/img/screenshot_2.jpeg" class="img-responsive img-rounded"
                                        style="max-width: 100%;"></div>
