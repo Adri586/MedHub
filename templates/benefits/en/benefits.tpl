@@ -20,7 +20,7 @@
             <br>
             <p>Have we piqued your interest?</p>
             <br>
-            <p>Then write to us: (Email)</p>
+            <p>Then write to us: EMAIL EINFÜGEN</p>
         {elseif $config.customerType == "medical_staff"}
             <h2>Sie sind nen geiler Dude</h2>
             <p> Doktor DoktoDoktor DoktoDoktor DoktoDoktor DoktoDoktor DoktoDoktor DoktoDoktor Doktor</p>
