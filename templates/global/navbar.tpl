@@ -21,13 +21,20 @@
                 <li>
                     <a href="/benefits" {if $config.requestedSite == "benefits"} class="active" {/if}>{if $config.language == "en"}Benefits{elseif $config.language == "de" || $config.language == "de_easy"}Vorteile{/if}</a>
                 </li>
+                {if $config.customerType == "medical_staff"}
+                    <li>
+                        <a href="/pricing" {if $config.requestedSite == "pricing"} class="active" {/if}>{if $config.language == "en"}Pricing{elseif $config.language == "de" || $config.language == "de_easy"}Preise{/if}</a>
+                    </li>
+                {/if}
                 <li>
                     <a href="/impressum" {if $config.requestedSite == "impressum"} class="active" {/if}>{if $config.language == "en"}Legal notice{elseif $config.language == "de" || $config.language == "de_easy"}Impressum{/if}</a>
                 </li>
 
             </ul>
 
-            <a class="nav navbar-nav navbar-right easy_lang" onclick="setParam('language', 'de_easy');" href="#"><img src="/web/img/easy_lang.png" alt="{if $config.language == "en"}Easy Lang{elseif $config.language == "de" || $config.language == "de_easy"}Einfache Sprache{/if}"></a>
+            <a class="nav navbar-nav navbar-right easy_lang" onclick="setParam('language', 'de_easy');" href="#"><img
+                        src="/web/img/easy_lang.png"
+                        alt="{if $config.language == "en"}Easy Lang{elseif $config.language == "de" || $config.language == "de_easy"}Einfache Sprache{/if}"></a>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
 
