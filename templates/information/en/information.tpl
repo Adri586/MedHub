@@ -12,7 +12,13 @@
                 past. {$config.pageName} detects your prescripted meds and notifies you when to refill your storage. Our cooperation
                 with online pharmacies and the doctor of your choice enables us to send your meds right to your
                 doorstep.</p>
-            <p>{$config.pageName} offers you reminders for the controlled use of your medication. Prescripted medication is
+           MedHub
+MedHub
+MedHub
+MedHub
+MedHub
+MedHub
+MedHub <p>{$config.pageName} offers you reminders for the controlled use of your medication. Prescripted medication is
                 inserted into your personal intake plan by your doctor or hospital staff so you can safely rely entirely
                 on {$config.pageName}.</p>
             <p>Memories can be displayed visually, by vibration or by sound. {$config.pageName} also offers you different font
